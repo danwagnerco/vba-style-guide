@@ -1,4 +1,4 @@
-This document is largely inspired by the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
+This document is largely inspired by the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
 
 # Prelude
 > No one man should have all that power.<br/>
@@ -32,3 +32,42 @@ This is an evolving document. Submit a pull request and start the conversation!
       Msgbox "False"
   End If
   ```
+
+* All conditionals, loops and blocks should be indented.
+
+  ```vb
+  'Bad
+  If lngNumber >= 0 Then
+  Msgbox "Yep"
+  Else
+  Msgbox "Nope"
+  End
+  
+  'Good
+  If lngNumber >= 0 Then
+      Msgbox "Yep"
+  Else
+      Msgbox "Nope"
+  End
+  
+  'Bad
+  For lngIndex = 1 To lngLastRow
+  lngCounter = lngCounter + lngIndex
+  Next lngIndex
+  
+  'Good
+  For lngIndex = 1 To lngLastRow
+      lngCounter = lngCounter + lngIndex
+  Next lngIndex
+  
+  'Bad
+  With wksSource
+  Set rngSource = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
+  End With
+  
+  'Good
+  With wksSource
+      Set rngSource = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
+  End With
+  ```
+
