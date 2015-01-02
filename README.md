@@ -71,3 +71,36 @@ This is an evolving document. Submit a pull request and start the conversation!
   End With
   ```
 
+## Variables and Naming
+
+> Oh that looks like what's-her-name, chances are it's what's-her-name.<br/>
+> -- Drake
+
+* Use `Option Explicit` to mandate variable declaration.
+
+  ```vb
+  'Bad
+  Public Sub MyMacro()
+      'do something
+  End Sub
+  
+  'Good
+  Option Explicit
+  Public Sub MyMacro()
+      'do something'
+  End
+  ```
+  
+* Declare variable types explicitly.
+
+  ```vb
+  'Bad
+  Dim MyNumber
+  Dim MyBlock
+  Dim MyVariable
+  
+  'Good
+  Dim MyNumber As Long
+  Dim MyBlock As Range
+  Dim MyVariable As Variant
+  ```
