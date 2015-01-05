@@ -104,3 +104,22 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim MyBlock As Range
   Dim MyVariable As Variant
   ```
+
+* Prepend all variables with a 3-letter code to indicate its type. This is commonly referred to as Hungarian Notation (or, more accurately, [_Apps Hungarian_](http://en.wikipedia.org/wiki/Hungarian_notation)
+
+  | Variable Type      | 3-Letter Code |
+  | ------------------ | ------------- |
+  | Workbook           | wbk           |
+  | Worksheet          | wks           |
+  | Long               | lng           |
+  | Double             | dbl           |
+  | String             | str           |
+  | Range              | rng           |
+  | Boolean            | bln           |
+  | Object             | obj           |
+  | FileDialog         | fdo           |
+  | Collection         | col           |
+  | Variant            | var           |
+  | Comment            | cmt           |
+  | ChartObject        | cho           |
+  | Shape              | shp           |
