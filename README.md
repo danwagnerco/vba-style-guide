@@ -24,7 +24,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   Else
     Msgbox "False"
   End If
-  
+
   'Good
   If blnSomething Then
       Msgbox "True" '<~ 4-character indents
@@ -42,29 +42,29 @@ This is an evolving document. Submit a pull request and start the conversation!
   Else
   Msgbox "Nope"
   End
-  
+
   'Good
   If lngNumber >= 0 Then
       Msgbox "Yep"
   Else
       Msgbox "Nope"
   End
-  
+
   'Bad
   For lngIndex = 1 To lngLastRow
   lngCounter = lngCounter + lngIndex
   Next lngIndex
-  
+
   'Good
   For lngIndex = 1 To lngLastRow
       lngCounter = lngCounter + lngIndex
   Next lngIndex
-  
+
   'Bad
   With wksSource
   Set rngSource = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
   End With
-  
+
   'Good
   With wksSource
       Set rngSource = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
@@ -83,14 +83,14 @@ This is an evolving document. Submit a pull request and start the conversation!
   Public Sub MyMacro()
       'do something
   End Sub
-  
+
   'Good
   Option Explicit
   Public Sub MyMacro()
       'do something'
   End
   ```
-  
+
 * Declare variable types explicitly.
 
   ```vb
@@ -98,7 +98,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim MyNumber
   Dim MyBlock
   Dim MyVariable
-  
+
   'Good
   Dim MyNumber As Long
   Dim MyBlock As Range
@@ -125,4 +125,15 @@ This is an evolving document. Submit a pull request and start the conversation!
   | Shape              | shp           |
 
   **EXCEPTION:** input variables to function should NOT have a 3-letter code. These variable types can be identified trivially by Intellisense and should be named to maximize readability:
-  
+
+![Function Input Variable](http://github/danwagnerco/vba-style-guide/raw/master/images/function-input-name.png)
+
+* When working with integers, use `Long` instead of `Integer`.
+
+  ```vb
+  'Bad
+  Dim intValue As Integer
+
+  'Good
+  Dim lngValue As Long
+  ```
