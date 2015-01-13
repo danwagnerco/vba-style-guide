@@ -137,3 +137,33 @@ This is an evolving document. Submit a pull request and start the conversation!
   'Good
   Dim lngValue As Long
   ```
+  
+  Under the covers, your CPU converts `Integer`-type variables into `Long`-type variables, does the math then converts the resulting `Long` back to an `Integer`. Avoid the debugging headache and default all integers to `Long`.
+
+* Name **local** variables in `CamelCase`. (Keep acronyms like HTTP, RFC and XML uppercase.)
+
+  ```vb
+  'Bad
+  Dim str_my_variable As String
+  Dim strmyvariable As String
+  Dim lngMid As Long
+
+  'Good
+  Dim strMyVariable As String
+  Dim lngMID As Long
+  ```
+  
+* Name **global** variables in `SCREAMING_SNAKE_CASE`. (Keep acronyms like HTTP, RFC and XML uppercase.)
+
+  ```vb
+  'Bad
+  Dim str_bad_publisher As String
+  Dim strBadPublisher As String
+  Dim lngCONSTANT As Long
+  Dim lngMID As Long
+   
+  'Good
+  Dim str_BAD_PUBLISHER As String
+  Dim lng_CONSTANT As Long
+  Dim lng_MID As Long
+  ```
