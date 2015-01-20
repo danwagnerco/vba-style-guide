@@ -126,7 +126,7 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   **EXCEPTION:** input variables to function should NOT have a 3-letter code. These variable types can be identified trivially by Intellisense and should be named to maximize readability:
 
-![Image](images/function-input-name.png)
+  ![Image](images/function-input-name.png)
 
 * When working with integers, use `Long` instead of `Integer`.
 
@@ -166,4 +166,16 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim str_BAD_PUBLISHER As String
   Dim lng_CONSTANT As Long
   Dim lng_MID As Long
+  ```
+
+* Generic 3-letter variable names are OK for common iterators.
+
+  ```vb
+  'OK
+  Dim wks As Worksheet
+  
+  For Each wks In ThisWorkbook.Worksheets
+    'do stuff to each sheet
+    Msgbox (wks.Name)
+  Next wks
   ```
