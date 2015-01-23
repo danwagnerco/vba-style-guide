@@ -105,7 +105,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim MyVariable As Variant
   ```
 
-* Prepend all variables with a 3-letter code to indicate its type. This is commonly referred to as Hungarian Notation (or, more accurately, [_Apps Hungarian_](http://en.wikipedia.org/wiki/Hungarian_notation)
+* Prepend all variables with a 3-letter code to indicate its type. This is commonly referred to as Hungarian Notation (or, more accurately, [_Apps Hungarian_](http://en.wikipedia.org/wiki/Hungarian_notation))
 
   | Variable Type      | 3-Letter Code |
   | ------------------ | ------------- |
