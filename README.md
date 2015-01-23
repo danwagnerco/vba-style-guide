@@ -87,7 +87,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   'Good
   Option Explicit
   Public Sub MyMacro()
-      'do something'
+      'do something
   End
   ```
 
@@ -146,26 +146,26 @@ This is an evolving document. Submit a pull request and start the conversation!
   'Bad
   Dim str_my_variable As String
   Dim strmyvariable As String
-  Dim lngMid As Long
+  Dim strHttp As String
 
   'Good
   Dim strMyVariable As String
-  Dim lngMID As Long
+  Dim strHTTP As String
   ```
   
 * Name **global** variables in `SCREAMING_SNAKE_CASE`. (Keep acronyms like HTTP, RFC and XML uppercase.)
 
   ```vb
   'Bad
-  Dim str_bad_publisher As String
-  Dim strBadPublisher As String
+  Dim str_error_message As String
+  Dim strErrorMessage As String
   Dim lngCONSTANT As Long
-  Dim lngMID As Long
+  Dim lngHttpAcceptedCode As Long
    
   'Good
-  Dim str_BAD_PUBLISHER As String
+  Dim str_ERROR_MESSAGE As String
   Dim lng_CONSTANT As Long
-  Dim lng_MID As Long
+  Dim lng_HTTP_ACCEPTED_CODE As Long
   ```
 
 * Generic 3-letter variable names are OK for common iterators.
@@ -175,7 +175,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim wks As Worksheet
   
   For Each wks In ThisWorkbook.Worksheets
-    'do stuff to each sheet
-    Msgbox (wks.Name)
+      'do stuff to each sheet
+      Msgbox (wks.Name)
   Next wks
   ```
