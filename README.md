@@ -179,3 +179,8 @@ This is an evolving document. Submit a pull request and start the conversation!
       Msgbox (wks.Name)
   Next wks
   ```
+
+* All functions should be stored in a unique module
+* All functional subroutines should be stored in a unique module
+* All public subroutines should be stored in a unique module
+* All global constants should be stored in a unique module
