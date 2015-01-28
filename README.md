@@ -128,7 +128,7 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   ![Image](images/function-input-name.png)
 
-* When working with integers, use `Long` instead of `Integer`.
+* When working with whole numbers, use `Long` instead of `Integer`.
 
   ```vb
   'Bad
