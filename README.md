@@ -136,6 +136,10 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   'Good
   Dim lngValue As Long
+  
+  'Integers are 16-bit and can only store values up to 32,767
+  lngValue = 50000 '<~ no issue
+  intValue = 50000 '<~ overflow error
   ```
   
   Under the covers, your CPU converts `Integer`-type variables into `Long`-type variables, does the math then converts the resulting `Long` back to an `Integer`. Avoid the debugging headache and default all integers to `Long`.
@@ -180,7 +184,28 @@ This is an evolving document. Submit a pull request and start the conversation!
   Next wks
   ```
 
+**NEED TO FLESH THESE OUT MORE**
 * All functions should be stored in a unique module
 * All functional subroutines should be stored in a unique module
 * All public subroutines should be stored in a unique module
 * All global constants should be stored in a unique module
+
+## Syntax
+
+> I'm different.<br/>
+> -- 2 Chainz
+
+* Close `For...Next` loops with the iterative variable after `Next`.
+
+  ```vb
+  'Bad
+  For Each wks in ThisWorkbook.Worksheets
+      'do stuff with each worksheet
+  Next
+  
+  'Good
+  For Each wks in ThisWorkbook.Worksheets
+      'do stuff with each worksheet
+  Next wks
+  ```
+* 
