@@ -192,8 +192,8 @@ This is an evolving document. Submit a pull request and start the conversation!
 
 ## Syntax
 
-> I'm different.<br/>
-> -- 2 Chainz
+> I'mma be fresh as hell if the Feds watching.<br/>
+> -- 2 Chainz & Pharrell
 
 * Close `For...Next` loops with the iterative variable after `Next`.
 
