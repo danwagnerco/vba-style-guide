@@ -208,4 +208,14 @@ This is an evolving document. Submit a pull request and start the conversation!
       'do stuff with each worksheet
   Next wks
   ```
-* 
+* Prefer `With...End With` blocks to reduce repetition.
+
+  ```vb
+  'Bad
+  Set rng = wks.Range(wks.Cells(1, 1), wks.Cells(lngLastRow, 1))
+  
+  'Good
+  With wks
+      Set rng = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
+  End With
+  ```
