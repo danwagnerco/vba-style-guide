@@ -204,10 +204,10 @@ This is an evolving document. Submit a pull request and start the conversation!
   End Sub
   ```
 
-This allows you to import all pre-defined constants by adding:
+  This allows you to import all pre-defined constants by adding:
 
   ```vb
-  Call ImportGlobalConstants()
+  Call ImportGlobalConstnats
   ```
   
 to your script.
