@@ -184,11 +184,38 @@ This is an evolving document. Submit a pull request and start the conversation!
   Next wks
   ```
 
+* Store all global constants in a single unique module named `ImportGlobalConstants`.
+ 
+  ```vb
+  Option Explicit
+
+  Public lng_MAX_NUM_FILES As Long
+  Public lng_EXCEL_2003_WIN As Long
+  Public lng_EXCEL_2007_WIN As Long
+  Public lng_EXCEL_BINARY_WIN As Long
+  Public lng_EXCEL_MACRO_ENABLED_WIN As Long
+
+  Public Sub ImportGlobalConstants()
+      lng_MAX_NUM_FILES = 1000
+      lng_EXCEL_2003_WIN = 56
+      lng_EXCEL_2007_WIN = 51
+      lng_EXCEL_BINARY_WIN = 50
+      lng_EXCEL_MACRO_ENABLED_WIN = 52
+  End Sub
+  ```
+
+This allows you to import all pre-defined constants by adding:
+
+  ```vb
+  Call ImportGlobalConstants()
+  ```
+  
+to your script.
+
 **NEED TO FLESH THESE OUT MORE**
 * All functions should be stored in a unique module
 * All functional subroutines should be stored in a unique module
 * All public subroutines should be stored in a unique module
-* All global constants should be stored in a unique module
 
 ## Syntax
 
