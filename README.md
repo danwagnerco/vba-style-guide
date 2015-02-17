@@ -207,14 +207,14 @@ This is an evolving document. Submit a pull request and start the conversation!
   This allows you to import all pre-defined constants by adding:
 
   ```vb
-  Call ImportGlobalConstnats
+  Call ImportGlobalConstants
   ```
   
 to your script.
 
 **NEED TO FLESH THESE OUT MORE**
-* All functions should be stored in a unique module
-* All functional subroutines should be stored in a unique module
+* All public, reusable functions should be stored in a unique module
+* All public, reusable subroutines should be stored in a unique module
 * All public subroutines should be stored in a unique module
 
 ## Syntax
