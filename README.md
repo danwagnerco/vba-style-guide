@@ -123,6 +123,8 @@ This is an evolving document. Submit a pull request and start the conversation!
   | Comment            | cmt           |
   | ChartObject        | cho           |
   | Shape              | shp           |
+  | Pivot Table        | pvt           |
+  | Pivot Cache        | pvc           |
 
   **EXCEPTION:** input variables to function should NOT have a 3-letter code. These variable types can be identified trivially by Intellisense and should be named to maximize readability:
 
