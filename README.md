@@ -144,7 +144,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   intValue = 50000 '<~ overflow error
   ```
   
-  Under the covers, your CPU converts `Integer`-type variables into `Long`-type variables, does the math then converts the resulting `Long` back to an `Integer`. Avoid the debugging headache and default all integers to `Long`.
+  Under the covers, `Integer`-type variables are converted into `Long`-type variables, the math is executed, then the `Long` is converted back to an `Integer`. Avoid the debugging headache and `Dim` all integers as `Long`-type.
 
 * Name **local** variables in `CamelCase`. (Keep acronyms like HTTP, RFC and XML uppercase.)
 
@@ -214,7 +214,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   
   to your script.
 
-* All public, reusable functions and subroutines that are not task-specific should be stored in a unique module
+* All public, reusable functions and subroutines that are not task-specific should be stored in a unique and easy-to-find module.
 
 ## Syntax
 
