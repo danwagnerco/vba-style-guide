@@ -234,6 +234,7 @@ This is an evolving document. Submit a pull request and start the conversation!
       'do stuff with each worksheet
   Next wks
   ```
+
 * Prefer `With...End With` blocks to reduce repetition.
 
   ```vb
@@ -245,3 +246,17 @@ This is an evolving document. Submit a pull request and start the conversation!
       Set rng = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
   End With
   ```
+  
+* Qualify `Range` objects with a `Worksheet`.
+
+  ```vb
+  'Bad
+  Set rng = Range(Cells(1, 1), Cells(lngIdx, 1))
+  
+  'Good
+  Set wks = ThisWorkbook.Worksheets("Data")
+  With wks
+      Set rng = .Range(.Cells(1, 1), .Cells(lngIdx, 1))
+  End With
+  ```
+
