@@ -138,12 +138,12 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   'Good
   Dim lngValue As Long
-  
+
   'Integers are 16-bit and can only store values up to 32,767
   lngValue = 50000 '<~ no issue
   intValue = 50000 '<~ overflow error
   ```
-  
+
   Under the covers, `Integer`-type variables are converted into `Long`-type variables, the math is executed, then the `Long` is converted back to an `Integer`. Avoid the debugging headache and `Dim` all integers as `Long`-type.
 
 * Name **local** variables in `CamelCase`. (Keep acronyms like HTTP, RFC and XML uppercase.)
@@ -158,7 +158,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim strMyVariable As String
   Dim strHTTP As String
   ```
-  
+
 * Name **global** variables in `SCREAMING_SNAKE_CASE`. (Keep acronyms like HTTP, RFC and XML uppercase.)
 
   ```vb
@@ -167,7 +167,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim strErrorMessage As String
   Dim lngCONSTANT As Long
   Dim lngHttpAcceptedCode As Long
-   
+
   'Good
   Dim str_ERROR_MESSAGE As String
   Dim lng_CONSTANT As Long
@@ -179,7 +179,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   ```vb
   'OK
   Dim wks As Worksheet
-  
+
   For Each wks In ThisWorkbook.Worksheets
       'do stuff to each sheet
       Msgbox (wks.Name)
@@ -187,7 +187,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   ```
 
 * Store all global constants in a single unique module named `ImportGlobalConstants`.
- 
+
   ```vb
   Option Explicit
 
@@ -211,10 +211,12 @@ This is an evolving document. Submit a pull request and start the conversation!
   ```vb
   Call ImportGlobalConstants
   ```
-  
+
   to your script.
 
 * All public, reusable functions and subroutines that are not task-specific should be stored in a unique and easy-to-find module.
+
+  ![Image](images/public-functions.png)
 
 ## Syntax
 
@@ -228,7 +230,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   For Each wks in ThisWorkbook.Worksheets
       'do stuff with each worksheet
   Next
-  
+
   'Good
   For Each wks in ThisWorkbook.Worksheets
       'do stuff with each worksheet
@@ -240,19 +242,19 @@ This is an evolving document. Submit a pull request and start the conversation!
   ```vb
   'Bad
   Set rng = wks.Range(wks.Cells(1, 1), wks.Cells(lngLastRow, 1))
-  
+
   'Good
   With wks
       Set rng = .Range(.Cells(1, 1), .Cells(lngLastRow, 1))
   End With
   ```
-  
+
 * Qualify `Range` objects with a `Worksheet`.
 
   ```vb
   'Bad
   Set rng = Range(Cells(1, 1), Cells(lngIdx, 1))
-  
+
   'Good
   Set wks = ThisWorkbook.Worksheets("Data")
   With wks
