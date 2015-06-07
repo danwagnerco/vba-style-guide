@@ -105,6 +105,16 @@ This is an evolving document. Submit a pull request and start the conversation!
   Dim MyVariable As Variant
   ```
 
+* When declaring variables on one line, they ALL must be declared explicitly.
+
+ ```vb
+ 'Bad
+ Dim lngLastRow, lngLastCol As Long '<~ lngLastRow is a Variant, NOT a Long
+ 
+ 'Good
+ Dim lngLastRow As Long, lngLastCol As Long '<~ both variables are Long
+ ```
+
 * Prepend all variables with a 3-letter code to indicate its type. This is commonly referred to as Hungarian Notation (or, more accurately, [_Apps Hungarian_](http://en.wikipedia.org/wiki/Hungarian_notation))
 
   | Variable Type      | 3-Letter Code |
