@@ -119,22 +119,23 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   | Variable Type      | 3-Letter Code |
   | ------------------ | ------------- |
+  | Boolean            | `bln`         |
+  | ChartObject        | `cho`         |
+  | Collection         | `col`         |
+  | Comment            | `cmt`         |
+  | Date               | `dat`         |
+  | Double             | `dbl`         |
+  | FileDialog         | `fdo`         |
+  | Long               | `lng`         |
+  | Object             | `obj`         |
+  | Pivot Cache        | `pvc`         |
+  | Pivot Table        | `pvt`         |
+  | Range              | `rng`         |
+  | Shape              | `shp`         |
+  | String             | `str`         |
+  | Variant            | `var`         |
   | Workbook           | `wbk`         |
   | Worksheet          | `wks`         |
-  | Long               | `lng`         |
-  | Double             | `dbl`         |
-  | String             | `str`         |
-  | Range              | `rng`         |
-  | Boolean            | `bln`         |
-  | Object             | `obj`         |
-  | FileDialog         | `fdo`         |
-  | Collection         | `col`         |
-  | Variant            | `var`         |
-  | Comment            | `cmt`         |
-  | ChartObject        | `cho`         |
-  | Shape              | `shp`         |
-  | Pivot Table        | `pvt`         |
-  | Pivot Cache        | `pvc`         |
 
   **EXCEPTION:** input variables to function should NOT have a 3-letter code. These variable types can be identified trivially by Intellisense and should be named to maximize readability:
 
