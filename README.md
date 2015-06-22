@@ -115,6 +115,17 @@ This is an evolving document. Submit a pull request and start the conversation!
  Dim lngLastRow As Long, lngLastCol As Long '<~ both variables are Long
  ```
 
+* Use a two statement declaration for objects rather than the `Dim X As New Y` syntax.
+
+ ```vb
+ 'Bad
+ Dim col As New Collection
+ 
+ 'Good
+ Dim col As Collection
+ Set col = New Collection
+ ```
+
 * Prepend all variables with a 3-letter code to indicate its type. This is commonly referred to as Hungarian Notation (or, more accurately, [_Apps Hungarian_](http://en.wikipedia.org/wiki/Hungarian_notation))
 
   | Variable Type      | 3-Letter Code |
