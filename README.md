@@ -71,6 +71,18 @@ This is an evolving document. Submit a pull request and start the conversation!
   End With
   ```
 
+* Do not write multiple statements on a single line (using `:`).
+
+  ```vb
+  'Bad
+  For i = 1 To 10: DoSomething(i): Next i
+
+  'Good
+  For i = 1 To 10
+      DoSomething(i)
+  Next i
+  ```
+
 ## Variables and Naming
 
 > Oh that looks like what's-her-name, chances are it's what's-her-name.<br/>
