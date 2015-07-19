@@ -149,6 +149,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   | Date               | `dat`         |
   | Double             | `dbl`         |
   | FileDialog         | `fdo`         |
+  | FileSystemObject   | `fso`         |
   | Long               | `lng`         |
   | Object             | `obj`         |
   | Pivot Cache        | `pvc`         |
@@ -156,6 +157,7 @@ This is an evolving document. Submit a pull request and start the conversation!
   | Range              | `rng`         |
   | Shape              | `shp`         |
   | String             | `str`         |
+  | TextStream         | `txs`         |
   | Variant            | `var`         |
   | Workbook           | `wbk`         |
   | Worksheet          | `wks`         |
