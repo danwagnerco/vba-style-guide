@@ -255,6 +255,38 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   ![Image](images/public-functions.png)
 
+* Prefer the verb "Get" for functions that return a `Workbook`.
+
+  ```vb
+  Public Function GetExceptionsTemplate() As Workbook
+      'the magic happens in here
+      Set GetExceptionsTemplate = Workbooks.Open(strFilePathToExceptionsTemplate)
+  End Function
+  ```
+
+* Prefer the verb "Pluck" for functions that return a `Range`.
+
+  ```vb
+  Public Function PluckIYYRow() As Workbook
+      'the magic happens in here
+      Set PluckIYYRow = .Range(.Cells(rngIYY.Row, 1), _
+                               .Cells(rngIYY.Row, lngLastCol))
+  End Function
+  ```
+
+* Prefer the verb "Gather" for functions that return a `Collection`.
+
+  ```vb
+  Public Function GatherDataFilePaths() As Collection
+      'the magic happens in here
+      While Len(strFile) > 0
+          col.Add (str_GLOBAL_DIR & strFile)
+          strFile = Dir
+      Wend
+      Set GatherDataFilePaths = col
+  End Function
+  ```
+
 ## Syntax
 
 > I'mma be fresh as hell if the Feds watching.<br/>
