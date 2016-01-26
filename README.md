@@ -274,16 +274,28 @@ This is an evolving document. Submit a pull request and start the conversation!
   End Function
   ```
 
-* Prefer the verb "Gather" for functions that return a `Collection`.
+* Prefer the verb "Collect" for functions that return a `Collection`.
 
   ```vb
-  Public Function GatherDataFilePaths() As Collection
+  Public Function CollectDataFilePaths() As Collection
       'the magic happens in here
       While Len(strFile) > 0
           col.Add (str_GLOBAL_DIR & strFile)
           strFile = Dir
       Wend
-      Set GatherDataFilePaths = col
+      Set CollectDataFilePaths = col
+  End Function
+  ```
+  
+* Prefer the verb "Assemble" for functions that return a `Scripting.Dictionary`.
+
+  ```vb
+  Public Function AssemblePairs() As Scripting.Dictionary
+      'the magic happens in here
+      For lngIdx = 1 To lngLastRow
+          dic.Add Key:=.Cells(lngIdx, 1), Item:=.Cells(lngIdx, 2)
+      Next lngIdx
+      Set AssemblePairs = dic
   End Function
   ```
 
