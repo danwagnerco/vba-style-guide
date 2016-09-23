@@ -255,6 +255,23 @@ This is an evolving document. Submit a pull request and start the conversation!
 
   ![Image](images/public-functions.png)
 
+* Prefer the verb "Create" for functions that return a `String`.
+
+  ```vb
+  Public Function CreateFullFilename() As String
+      'the magic happens in here
+      CreateFullFilename = ThisWorkbook.Path & "\not_really_this_easy.xlsb"
+  End Function
+  ```  
+
+* Prefer the verb "Calculate" for functions that return a `Long`.
+
+  ```vb
+  Public Function CalculateUltimateQuestionOfLife() As Long
+      CalculateUltimateQuestionOfLife = 42
+  End Function
+  ```  
+
 * Prefer the verb "Get" for functions that return a `Workbook`.
 
   ```vb
