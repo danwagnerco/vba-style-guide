@@ -284,7 +284,7 @@ This is an evolving document. Submit a pull request and start the conversation!
 * Prefer the verb "Pluck" for functions that return a `Range`.
 
   ```vb
-  Public Function PluckIYYRow() As Workbook
+  Public Function PluckIYYRow() As Range
       'the magic happens in here
       Set PluckIYYRow = .Range(.Cells(rngIYY.Row, 1), _
                                .Cells(rngIYY.Row, lngLastCol))
